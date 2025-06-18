@@ -129,9 +129,7 @@ body {
     margin-top: 4rem !important;
 }
 
-#skeletonLoader {
-    display: none;
-}
+
 
 .skeleton-card {
     background-color: #ffffff;
@@ -141,9 +139,9 @@ body {
 }
 
 .skeleton-text {
-    height: 16px;
+    height: 14px;
     border-radius: 4px;
-    background-color: rgba(123, 168, 133, 0.4); /* más visible y basado en --color-opcional1 */
+    background-color: rgba(0, 0, 0, 0.08); /* gris bajito */
     margin-bottom: 10px;
 }
 
@@ -166,13 +164,13 @@ body {
 /* Animación tipo "pulse" */
 @keyframes pulse {
     0% {
-        background-color: rgba(123, 168, 133, 0.4);
+        background-color: rgba(0, 0, 0, 0.08);
     }
     50% {
-        background-color: rgba(123, 168, 133, 0.6);
+        background-color: rgba(0, 0, 0, 0.14);
     }
     100% {
-        background-color: rgba(123, 168, 133, 0.4);
+        background-color: rgba(0, 0, 0, 0.08);
     }
 }
 
