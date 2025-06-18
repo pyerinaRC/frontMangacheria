@@ -47,12 +47,19 @@ function formatearFecha(fechaISO) {
 
 async function cargarComentarios() {
     const contenedor = document.getElementById("comentariosLista");
-    contenedor.innerHTML = ""; // Limpia esqueleto antes de cargar
+    const skeleton = document.getElementById("skeletonLoader");
+
+    skeleton.style.display = "block";
+    contenedor.innerHTML = "";
+
+    // Espera 15s antes de cargar la API
+    await new Promise(resolve => setTimeout(resolve, 15000));
 
     try {
         const res = await fetch(API_URL);
         const datos = await res.json();
-        contenedor.innerHTML = ""; // Asegura que se vacíe el loader
+
+        skeleton.style.display = "none";
 
         datos.reverse().forEach(item => {
             const div = document.createElement("div");
@@ -68,9 +75,10 @@ async function cargarComentarios() {
         });
     } catch (error) {
         console.error("Error al cargar comentarios:", error);
-        contenedor.innerHTML = `<div class="text-danger">No se pudieron cargar los comentarios.</div>`;
+        skeleton.innerHTML = "<p class='text-danger'>Error al cargar los comentarios.</p>";
     }
 }
+
 
 
 window.addEventListener("DOMContentLoaded", cargarComentarios);
