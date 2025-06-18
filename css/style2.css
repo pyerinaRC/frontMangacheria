@@ -133,6 +133,50 @@ body {
     display: none;
 }
 
+.skeleton-card {
+    background-color: #ffffff;
+    border-left: 4px solid var(--color-opcional1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    animation: pulse 1.5s infinite;
+}
+
+.skeleton-text {
+    height: 16px;
+    border-radius: 4px;
+    background-color: rgba(123, 168, 133, 0.4); /* más visible y basado en --color-opcional1 */
+    margin-bottom: 10px;
+}
+
+.skeleton-text.full {
+    width: 100%;
+}
+
+.skeleton-text.medium {
+    width: 70%;
+}
+
+.skeleton-text.short {
+    width: 40%;
+}
+
+.skeleton-text.tiny {
+    width: 30%;
+}
+
+/* Animación tipo "pulse" */
+@keyframes pulse {
+    0% {
+        background-color: rgba(123, 168, 133, 0.4);
+    }
+    50% {
+        background-color: rgba(123, 168, 133, 0.6);
+    }
+    100% {
+        background-color: rgba(123, 168, 133, 0.4);
+    }
+}
+
+
 
 #btnPublicar {
     background-color: var(--color-titulos);
