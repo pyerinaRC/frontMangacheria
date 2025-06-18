@@ -53,7 +53,7 @@ async function cargarComentarios() {
     contenedor.innerHTML = "";
 
     // Espera 15s antes de cargar la API
-    await new Promise(resolve => setTimeout(resolve, 10000));
+    await new Promise(resolve => setTimeout(resolve, 5000));
 
     try {
         const res = await fetch(API_URL);
