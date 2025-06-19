@@ -208,21 +208,21 @@ body {
 }
 
 .media-item h5 {
-    font-size: 18px;
+    font-size: 14px;
     color: #b14624;
     font-weight: 700;
     margin: 0;
 }
 
 .media-item p {
-    font-size: 16px;
+    font-size: 12px;
     margin: 6px 0 10px;
     color: #333;
 }
 
 .media-item .btn {
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: var(--color-menu);
     color: white;
     font-weight: bold;
@@ -234,7 +234,7 @@ body {
 .titulo-secundario {
     font-family: "Inknut Antiqua", serif;
     color: var(--color-titulos);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -249,7 +249,7 @@ body {
 
 .justificado {
     text-align: justify;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 
