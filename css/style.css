@@ -496,8 +496,6 @@ footer {
     }
 }
 
-@media (max-width: 768px) {}
-
 @media (max-width: 480px) {
     .historia {
         flex-direction: column;
@@ -542,7 +540,8 @@ footer {
     }
 }
 
-.lugares, .lugares-escuela {
+.lugares,
+.lugares-escuela {
     display: flex;
     gap: 70px;
     align-items: center;
@@ -598,6 +597,83 @@ footer {
 
     .justificado {
         font-size: 14px;
+    }
+}
+
+/* VIDEOBLOG */
+.videoblog {
+    margin: 100px 40px 40px 40px;
+    text-align: center;
+    justify-self: center;
+    width: 80%;
+
+    .blog {
+        font-family: "Inknut Antiqua", serif;
+        font-size: 40px;
+        color: var(--color-titulos);
+        font-weight: 800;
+        text-align: start;
+        width: 900px;
+        justify-self: center;
+    }
+
+    .titulo-blog {
+        font-family: "Hanken Grotesk", serif;
+        text-align: center;
+        color: #b14624;
+        font-size: 30px;
+        margin: 20px 0px;
+    }
+
+    img {
+        width: 700px;
+    }
+
+    .blogs {
+        margin: 20px 0px;
+        justify-items: center;
+
+        p {
+            font-family: "Hanken Grotesk", serif;
+            background-color: var(--color-menu);
+            width: 70%;
+            text-align: start;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .videoblog {
+        margin: 80px 10px 40px 10px;
+        width: 100%;
+        .blog {
+            font-size: 30px;
+            width: 80%;
+        }
+
+        .titulo-blog {
+            font-size: 18px;
+            margin: 20px 0px;
+        }
+
+        img {
+            width: 250px;
+        }
+
+        .blogs {
+            margin: 20px 0px;
+            p {
+                width: 80%;
+                margin: 20px 0;
+                font-size: 11px;
+            }
+        }
     }
 }
 
