@@ -120,12 +120,21 @@ body {
     font-family: "Inknut Antiqua", serif;
 }
 
+.comic{
+    background-image: url('../img/portada-2.jpg');
+}
+
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1;
+}
+
+
+.hero.comic::before{
+    background: rgba(177, 177, 177, 0.7);
 }
 
 .hero-content {
@@ -188,6 +197,41 @@ body {
         font-family: "Inknut Antiqua", serif;
         font-size: 14px;
     }
+}
+
+
+/* COMIC */
+.comic-block {
+    z-index: 2;
+    display: inline-block;
+    position: relative;
+    margin-top: 60px;
+}
+
+.badge-comic {
+    background-color: #C1440E;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    top: -30px;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.comic-img {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comic-title {
+    color: var(--color-titulos);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
 
