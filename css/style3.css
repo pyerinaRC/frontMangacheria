@@ -167,6 +167,29 @@ body {
 }
 
 
+.jugar-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .jugar-pc {
+        display: none;
+    }
+
+    .jugar-mobile {
+        display: block;
+    }
+
+    .play-warning {
+        margin-top: 20px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: #fff;
+        font-family: "Inknut Antiqua", serif;
+        font-size: 14px;
+    }
+}
+
 
 
 /* FOOTER */
