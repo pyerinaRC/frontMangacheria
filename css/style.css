@@ -120,7 +120,7 @@ body {
     font-family: "Inknut Antiqua", serif;
 }
 
-.game{
+.game {
     background-image: url('../img/game-portada.jpg');
 }
 
@@ -171,8 +171,8 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 80px 120px;
-    gap: 20px;
+    padding: 50px 80px;
+    gap: 15px;
 }
 
 .container-card .card {
@@ -189,20 +189,20 @@ body {
 }
 
 .container-card .card img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 10px;
 }
 
 .container-card .content h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--color-titulos);
     font-weight: bold;
 }
 
 .container-card .content p {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--color-titulos);
 }
 
@@ -231,14 +231,14 @@ body {
 }
 
 .media-item h5 {
-    font-size: 14px;
+    font-size: 18px;
     color: #b14624;
     font-weight: 700;
     margin: 0;
 }
 
 .media-item p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 6px 0 10px;
     color: #333;
 }
@@ -272,7 +272,7 @@ body {
 
 .justificado {
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -390,14 +390,20 @@ footer {
 }
 
 /*NOSOTROS*/
+.container-equipo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
 .titulo-equipo {
-    margin-top: 90px;
     margin-bottom: 20px;
     font-family: "Inknut Antiqua", serif;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--color-titulos);
     font-weight: 800;
-    text-align: center;
 }
 
 .equipo {
@@ -407,7 +413,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 70%;
-    margin: 0 auto;
+    margin: 20px;
     /* Para centrar el contenedor */
 }
 
@@ -418,8 +424,8 @@ footer {
 }
 
 .item img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 15px;
     background-color: var();
     object-fit: cover;
@@ -659,7 +665,7 @@ footer {
             border-radius: 20px;
             color: #fff;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 17px;
         }
     }
 }
@@ -668,6 +674,7 @@ footer {
     .videoblog {
         margin: 80px 10px 40px 10px;
         width: 100%;
+
         .blog {
             font-size: 30px;
             width: 80%;
@@ -684,6 +691,7 @@ footer {
 
         .blogs {
             margin: 20px 0px;
+
             p {
                 width: 80%;
                 margin: 20px 0;
@@ -696,7 +704,7 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 992px) {
 
-    .container-card{
+    .container-card {
         padding: 0px;
     }
 
@@ -716,7 +724,7 @@ footer {
         font-size: 0.9rem;
     }
 
-    .container-card{
+    .container-card {
         padding: 0px;
     }
 
@@ -744,4 +752,3 @@ footer {
         gap: 10px;
     }
 }
-
