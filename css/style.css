@@ -120,6 +120,10 @@ body {
     font-family: "Inknut Antiqua", serif;
 }
 
+.game{
+    background-image: url('../img/game-portada.jpg');
+}
+
 .hero::before {
     content: "";
     position: absolute;
@@ -142,6 +146,25 @@ body {
     font-size: 1.5rem;
     font-weight: 300;
 }
+
+
+.btn-jugar {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ffaa00;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-jugar:hover {
+    background-color: #ff8800;
+}
+
 
 /* TARJETAS */
 .container-card {
