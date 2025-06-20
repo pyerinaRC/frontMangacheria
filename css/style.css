@@ -373,6 +373,234 @@ footer {
     margin: 0px 5px;
 }
 
+/*NOSOTROS*/
+.titulo-equipo {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 50px;
+    color: var(--color-titulos);
+    font-weight: 800;
+    text-align: center;
+}
+
+.equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    /* Para centrar el contenedor */
+}
+
+.item {
+    text-align: center;
+    flex: 0 0 auto;
+    /* No crecer ni encogerse, mantener tamaño natural */
+}
+
+.item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    background-color: var();
+    object-fit: cover;
+    border: 4px solid transparent;
+}
+
+.name {
+    margin-top: 8px;
+    color: #a0350f;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Media queries para ajustar el gap en pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .equipo {
+        gap: 40px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-equipo {
+        font-size: 40px;
+    }
+
+    .equipo {
+        gap: 30px;
+        width: 80%;
+    }
+
+    .item img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-equipo {
+        font-size: 25px;
+    }
+
+    .equipo {
+        gap: 20px;
+        width: 80%;
+    }
+
+    .item img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Historia */
+.historia {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin: 100px 280px 30px 280px;
+    justify-content: center;
+}
+
+.titulo-historia {
+    font-family: "Inknut Antiqua", serif;
+    font-size: 40px;
+    color: var(--color-titulos);
+    font-weight: 800;
+    text-align: center;
+}
+
+.titulo-historia span {
+    color: #b14624;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.img-historia {
+    display: flex;
+    flex-direction: column;
+    background-color: #b14624;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+
+    img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+    .historia {
+        flex-direction: column;
+        margin: 80px 20px 20px 20px;
+        gap: 20px;
+    }
+
+    .titulo-historia {
+        font-size: 25px;
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    .justificado {
+        font-size: 12px;
+    }
+
+    .img-historia {
+        img {
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+}
+
+/* LUGARES------ */
+.lugares-titulo {
+    font-family: "Inknut Antiqua", serif;
+    font-size: 50px;
+    color: var(--color-titulos);
+    font-weight: 800;
+    text-align: center;
+    margin: 100px 280px 30px 280px;
+
+    span {
+        color: #b14624;
+        font-weight: 800;
+        font-size: 35px;
+    }
+}
+
+.lugares, .lugares-escuela {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin: 60px 280px 30px 280px;
+    justify-content: center;
+}
+
+.titulo-lugares {
+    font-family: "Hanken Grotesk", serif;
+    text-align: center;
+    color: #b14624;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.img-lugares {
+    background-color: var(--color-menu);
+    padding: 20px;
+    border-radius: 20px;
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .lugares-titulo {
+        font-size: 30px;
+        margin: 80px 20px 20px 20px;
+
+        span {
+            font-size: 25px;
+        }
+    }
+
+    .lugares {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 20px 50px 20px;
+    }
+
+    .lugares-escuela {
+        flex-direction: column-reverse;
+        gap: 10px;
+        margin: 20px 20px 50px 20px;
+    }
+
+    .titulo-lugares {
+        font-size: 15px;
+    }
+
+    .justificado {
+        font-size: 14px;
+    }
+}
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .container-card .card {
