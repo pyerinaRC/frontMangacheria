@@ -55,6 +55,13 @@
         </div>
     </section>
 
+
+    <div id="comic-loader" class="comic-loader">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+    </div>
+
+
     <section class="comic-book">
         <div class="comic-container">
             <button class="comic-btn left" onclick="prevPage()" id="btn-prev"><i
@@ -107,8 +114,8 @@
     <script>
         const isMobile = window.innerWidth <= 768;
         const container = document.querySelector('.comic-container');
+        const loader = document.getElementById('comic-loader');
 
-        // Borra las páginas originales
         document.querySelectorAll('.comic-page').forEach(p => p.remove());
 
         const imageSources = [
@@ -121,13 +128,31 @@
         ];
 
         let pageElements = [];
+        let loadedImages = 0;
+
+        function imageLoaded() {
+            loadedImages++;
+            if (loadedImages === imageSources.length) {
+                loader.style.display = 'none';
+                showPage(currentPage);
+            }
+        }
+
+        function createImage(src) {
+            const img = new Image();
+            img.src = src;
+            img.className = 'comic-imgs';
+            img.onload = imageLoaded;
+            return img;
+        }
 
         if (isMobile) {
             imageSources.forEach((src, i) => {
                 const page = document.createElement('div');
                 page.className = 'comic-page';
                 page.id = `page-${i}`;
-                page.innerHTML = `<img src="${src}" class="comic-imgs">`;
+                const img = createImage(src);
+                page.appendChild(img);
                 container.insertBefore(page, document.getElementById('btn-next'));
                 pageElements.push(page);
             });
@@ -136,16 +161,18 @@
                 const page = document.createElement('div');
                 page.className = 'comic-page';
                 page.id = `page-${i / 2}`;
-                page.innerHTML = `
-                <img src="${imageSources[i]}" class="comic-imgs img-left">
-                ${imageSources[i + 1] ? `<img src="${imageSources[i + 1]}" class="comic-imgs img-right">` : ''}
-            `;
+                const img1 = createImage(imageSources[i]);
+                page.appendChild(img1);
+                if (imageSources[i + 1]) {
+                    const img2 = createImage(imageSources[i + 1]);
+                    img2.classList.add('img-right');
+                    page.appendChild(img2);
+                }
                 container.insertBefore(page, document.getElementById('btn-next'));
                 pageElements.push(page);
             }
         }
 
-        // Lógica de navegación
         let currentPage = 0;
         const btnPrev = document.getElementById('btn-prev');
         const btnNext = document.getElementById('btn-next');
@@ -175,8 +202,6 @@
                 showPage(currentPage);
             }
         };
-
-        showPage(currentPage);
     </script>
 
 </body>
