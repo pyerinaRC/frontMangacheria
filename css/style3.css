@@ -124,6 +124,82 @@ body {
     background-image: url('../img/portada-2.jpg');
 }
 
+
+.comic-book {
+  padding: 60px 0;
+  background-color: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+}
+
+.comic-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background: white;
+}
+
+.comic-page {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+  gap: 20px;
+}
+
+.comic-page.active {
+  display: flex;
+}
+
+.comic-imgs {
+  width: 49%;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 767.98px) {
+  .comic-imgs {
+    width: 100% !important;
+  }
+
+  .img-right {
+    display: none;
+  }
+}
+
+
+.comic-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.comic-btn:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.comic-btn.left {
+  left: 10px;
+}
+
+.comic-btn.right {
+  right: 10px;
+}
+
+
+
 .hero::before {
     content: "";
     position: absolute;
