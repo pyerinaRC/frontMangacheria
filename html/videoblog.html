@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 
     <title>La Mangachería</title>
@@ -47,9 +48,56 @@
         <img src="../img/blog.png" alt="">
 
         <div class="blogs">
-            <p>CAPÍTULO 1: ORÍGENES, EL COMIENZO DE UNA HISTORIA.</p>
-            <p>CAPÍTULO 2: EL LEGADO DE MI PADRE EN LA MANGACHERÍA.</p>
-            <p>CAPÍTULO 3: ACTUALIDAD, LA MIRADA DE MANUEL.</p>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            CAPÍTULO 1: ORÍGENES, EL COMIENZO DE UNA HISTORIA.
+                            <i class="fa-solid fa-chevron-down ms-auto icon-flecha"></i>
+                        </button>
+
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <iframe src="https://player.vimeo.com/video/1095313623" width="800" height="520" frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vlog #1: Orígenes">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            CAPÍTULO 2: EL LEGADO DE MI PADRE EN LA MANGACHERÍA.
+                            <i class="fa-solid fa-chevron-down ms-auto icon-flecha"></i>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <iframe src="https://player.vimeo.com/video/1095313347" width="800" height="520" frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vlog #1: Orígenes">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            CAPÍTULO 3: ACTUALIDAD, LA MIRADA DE MANUEL.
+                            <i class="fa-solid fa-chevron-down ms-auto icon-flecha"></i>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <iframe src="https://player.vimeo.com/video/1095311272" width="800" height="520" frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vlog #1: Orígenes">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
     </div>
@@ -77,6 +125,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="../scripts/acordeon.js"></script>
 </body>
 
 </html>

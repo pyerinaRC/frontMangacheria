@@ -474,9 +474,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .container-equipo{
+    .container-equipo {
         margin-top: 80px;
     }
+
     .titulo-equipo {
         font-size: 28px;
     }
@@ -668,17 +669,46 @@ footer {
         margin: 20px 0px;
         justify-items: center;
 
-        p {
+        .accordion {
+            width: 70%;
+        }
+
+        .accordion-item {
+            margin-bottom: 30px;
+            background-color: #fff1c7;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .accordion-button {
             font-family: "Hanken Grotesk", serif;
             background-color: var(--color-menu);
-            width: 70%;
             text-align: start;
             padding: 15px;
-            margin: 30px 0;
-            border-radius: 20px;
+            border-radius: 20px !important;
             color: #fff;
             font-weight: 700;
             font-size: 17px;
+            border: none;
+            width: 100%;
+        }
+
+        /* Oculta la flechita original de Bootstrap */
+        .accordion-button::after {
+            display: none;
+        }
+
+        /* Estilo general de la flecha personalizada */
+        .icon-flecha {
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-left: 10px;
+            color: var(--color-fondo);
+        }
+
+        /* Cuando está abierta: rota la flecha y cambia de color */
+        .accordion-button:not(.collapsed) .icon-flecha {
+            transform: rotate(180deg);
+            color: #b14624;
         }
     }
 }
