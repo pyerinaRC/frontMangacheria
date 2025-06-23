@@ -199,44 +199,6 @@ body {
 
 /* -------------------- */
 
-
-.comic-loader {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 80px 0;
-    background-color: var(--color-fondo);
-}
-
-.skeleton {
-    width: 49%;
-    height: 400px;
-    border-radius: 5px;
-    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes loading {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .skeleton {
-        width: 90%;
-    }
-}
-
-
-/* _______________ */
-
 .hero::before {
     content: "";
     position: absolute;

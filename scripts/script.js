@@ -10,7 +10,6 @@ document.getElementById("comentarioForm").addEventListener("submit", async funct
 
     if (!autor || !contenido) return;
 
-    // Mostrar spinner y deshabilitar botón
     spinner.classList.remove("d-none");
     btn.disabled = true;
 
