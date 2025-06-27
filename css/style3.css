@@ -316,12 +316,37 @@ footer {
     background-color: var(--color-menu);
 }
 
+.footerLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerLogo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.logoText {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-fondo);
+    font-family: "Inknut Antiqua", serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
 .footerContainer {
     width: 100%;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .socialIcons {
