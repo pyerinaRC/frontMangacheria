@@ -472,7 +472,8 @@ footer {
     font-size: 14px;
     line-height: 1.2;
 }
-.rol{
+
+.rol {
     color: var(--color-titulos);
 }
 
@@ -693,6 +694,11 @@ footer {
         width: 700px;
     }
 
+    iframe {
+        width: 800px;
+        height: 520px;
+    }
+
     .blogs {
         margin: 20px 0px;
         justify-items: center;
@@ -772,10 +778,15 @@ footer {
             .accordion {
                 width: 80%;
             }
+
+            .accordion-button {
+                font-size: 15px;
+            }
         }
 
         iframe {
             width: 250px;
+            height: 200px;
         }
 
         .accordion-collapse {
