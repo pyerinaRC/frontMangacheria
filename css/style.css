@@ -443,7 +443,7 @@ footer {
 .equipo {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 45px;
     justify-content: center;
     align-items: center;
     width: 70%;
@@ -454,7 +454,6 @@ footer {
 .item {
     text-align: center;
     flex: 0 0 auto;
-    /* No crecer ni encogerse, mantener tamaño natural */
 }
 
 .item img {
@@ -473,6 +472,10 @@ footer {
     font-size: 14px;
     line-height: 1.2;
 }
+.rol{
+    color: var(--color-titulos);
+}
+
 
 /* Media queries para ajustar el gap en pantallas más pequeñas */
 @media (max-width: 1200px) {
@@ -765,6 +768,18 @@ footer {
                 margin: 20px 0;
                 font-size: 11px;
             }
+
+            .accordion {
+                width: 80%;
+            }
+        }
+
+        iframe {
+            width: 250px;
+        }
+
+        .accordion-collapse {
+            height: min-content;
         }
     }
 }
